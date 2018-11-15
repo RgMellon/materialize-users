@@ -3,9 +3,10 @@
 @section('content')
 <div class="container">
     <div class="card-panel" style="margin-top:4rem;">
+        <span class="card-title" style="padding-bottom:2rem;display:block;font-size:1.5rem;"> Login   </span>
         <div class="row">
             <div class="col s12 m12">
-                <form class="col s12" method="POST" action="{{ route('login') }}">
+                <form  method="POST" action="{{ route('login') }}">
                     @csrf
                 
                     <div class="row">
@@ -30,12 +31,13 @@
                         </div>
 
                         <div class="col s12">
-                            <div class="col s12 m6" style="padding-left: 0;">
+                            <div class="">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
                             </div>
                         </div>
+
                     </div>
                 </form>
             </div>
