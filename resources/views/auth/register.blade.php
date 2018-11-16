@@ -9,7 +9,7 @@
             <div class="col s12 m12">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
-                    
+
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>

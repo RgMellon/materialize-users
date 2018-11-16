@@ -22,11 +22,11 @@
 </head>
 <body>
     <div id="app">
-    
-    
+
+
         <nav>
             <div class="nav-wrapper container">
-                <a href="/" class="brand-logo"> Logo </a>
+            <a href="{{ route('home')}}" class="brand-logo"> APS </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     @guest
@@ -37,10 +37,10 @@
                         @endif
 
                     @else
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">  {{ Auth::user()->name }}  <i class="material-icons right">arrow_drop_down</i></a></li>
                         <ul id="dropdown1" class="dropdown-content">
                             <li><a href="#!">   {{ Auth::user()->name }} </a></li>
-                            <li> 
+                            <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
@@ -71,11 +71,13 @@
         crossorigin="anonymous">
     </script>
     <script>
-       
+
          $(document).ready(function(){
             $('.sidenav').sidenav();
             $(".dropdown-trigger").dropdown();
-        
+
+            $('select').formSelect();
+
         });
     </script>
 </body>
